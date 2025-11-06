@@ -1,0 +1,18 @@
+import java.lang.*; 
+class Priority extends Thread
+{
+  public void run()
+ {
+  System.out.println("run() method");
+  }
+ }
+public class ThreadPriority
+ {
+  public static void main(String args[])
+  {
+   Priority tp1=new Priority();
+   tp1.start();
+   System.out.println("priority of thread:"+tp1.getPriority(10));
+   tp1.setPriority(6); 
+    }
+   }
