@@ -1,0 +1,43 @@
+// multi threading using extends thread class
+class Thread1 extends Thread
+{
+  public void run()
+ {
+  for(int i=1;i<=10;i++)
+  {
+    System.out.println("i:"+i);
+   }
+  }
+ }
+class Thread2 extends Thread
+{
+  public void run()
+ {
+  for(int j=11;j<=20;j++)
+  {
+    System.out.println("j:"+j);
+   }
+  }
+ }
+class Thread3 extends Thread
+{
+  public void run()
+ {
+  for(int k=21;k<=30;k++)
+  {
+    System.out.println("k:"+k);
+   }
+  }
+ }
+public class ThreadClass
+ {
+  public static void main(String args[])
+ {
+  Thread1 A=new Thread1();
+  A.start();
+  Thread2 B=new Thread2();
+  B.start();
+  Thread3 C=new Thread3();
+  C.start();
+   }
+  }
