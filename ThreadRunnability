@@ -1,0 +1,42 @@
+// multi threading using runnable interface
+class AThread
+{
+  public void display()
+ {
+    System.out.println("this is thread class");
+  }
+ }
+class BThread extends AThread implements Runnable
+{
+  public void run()
+ {
+  for(int j=11;j<=20;j++)
+  {
+    System.out.println("j:"+j);
+   }
+  }
+ }
+class CThread implements Runnable
+{
+  public void run()
+ {
+ System.out.println("hello");
+  for(int k=21;k<=30;k++)
+  {
+    System.out.println("k:"+k);
+   }
+  }
+ }
+public class ThreadRunnable
+ {
+  public static void main(String args[])
+ {
+  BThread t1=new BThread();
+  Thread d=new Thread(t1);
+  t1.display();
+  d.start();
+  CThread t2=new CThread();
+  Thread f=new Thread(t2);
+  f.start();
+   }
+  }
