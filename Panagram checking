@@ -1,0 +1,9 @@
+class Solution:
+    def checkPangram(self,s):
+        #code here
+        letter = set()
+        for i in s.lower():
+            if 'a'<=i <='z':
+                letter.add(i)
+        return len(letter)==26
+
